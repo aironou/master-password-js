@@ -1,0 +1,8 @@
+{
+    "devDependencies": {
+        "terser": "^5.48.0"
+    },
+    "scripts": {
+        "build": "terser mpw.js pbkdf2.js scrypt.js -cm --mangle-props --comments false --output dist/master-password.min.js"
+    }
+}

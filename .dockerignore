@@ -1,0 +1,10 @@
+.git/
+.idea/
+dist/
+node_modules/
+
+.gitignore
+compose.yml
+Dockerfile
+LICENSE
+README.md
