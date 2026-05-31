@@ -7,6 +7,14 @@ DC_CLI = $(DC) run --rm cli
 .PHONY: init
 init: dist/master-password.min.js
 
+.PHONY: pack
+pack: node_modules
+	$(DC_CLI) pack --pack-destination dist
+
+.PHONY: cli
+cli:
+	$(DC) run --entrypoint '' --rm cli sh
+
 dist/master-password.min.js: node_modules
 	$(DC_CLI) run build
 
