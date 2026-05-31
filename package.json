@@ -1,8 +1,17 @@
 {
+    "name": "@aironou/master-password-js",
+    "version": "1.0.1",
+    "description": "JS implementation of the master password algorithm",
+    "license": "CC-BY-4.0",
+    "main": "dist/master-password.min.js",
+    "files": [
+        "dist/master-password.min.js"
+    ],
     "devDependencies": {
         "terser": "^5.48.0"
     },
     "scripts": {
-        "build": "terser mpw.js pbkdf2.js scrypt.js -cm --mangle-props --comments false --output dist/master-password.min.js"
+        "build": "terser mpw.js pbkdf2.js scrypt.js -cm --mangle-props --comments false --output dist/master-password.min.js",
+        "prepack": "npm run build"
     }
 }
