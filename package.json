@@ -1,6 +1,6 @@
 {
     "name": "@aironou/master-password-js",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "JS implementation of the master password algorithm",
     "license": "CC-BY-4.0",
     "main": "dist/master-password.min.js",
