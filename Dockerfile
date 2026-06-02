@@ -9,6 +9,10 @@ ARG WORKDIR
 
 WORKDIR ${WORKDIR}
 
+COPY mpw.js .
+COPY pbkdf2.js .
+COPY scrypt.js .
+
 COPY package.json .
 COPY package-lock.json .
 
