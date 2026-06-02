@@ -127,7 +127,6 @@ window.scrypt = function () {
 		let b = pbkdf2(passphrase, salt, 1, p * 128 * r, "SHA-256");
 		
 		for (let i = 0; i < p; i++) {
-			// Defers each block so this remains asynchronous and does not block the UI thread.
 			b = b.then(b => new Promise(resolve => setTimeout(() => (smix(b.subarray(i * 128 * r), r, N, v, x, y), resolve(b)), 0)));
 		}
 		
